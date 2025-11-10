@@ -1,0 +1,25 @@
+# --- Core Packages ---
+accelerate==0.34.2
+evaluate==0.4.0
+transformers==4.49.0
+ml_collections==0.1.1
+ninja==1.11.1
+numexpr==2.8.4
+peft==0.14.0
+torch==2.0.1
+torchaudio==2.0.2
+torchvision==0.15.2
+numpy==1.24.3
+scikit-learn==1.2.2
+
+# --- logging ---
+tensorboard==2.19.0
+tensorboard-plugin-wit==1.8.1
+
+# --- utils ---
+etils==1.9.4
+importlib-metadata==6.8.0
+importlib_resources==6.4.5
+ordered-set==4.1.0
+portalocker==2.10.1
+py-cpuinfo==9.0.0
