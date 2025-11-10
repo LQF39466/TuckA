@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-  <img src="assets/framework_newcolor.png" width="1100"/>
+  <img src="rep_assets/framework_newcolor.png" width="1100"/>
 </div>
 
 ## Introduction
