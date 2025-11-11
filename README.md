@@ -2,6 +2,8 @@
 
 # [AAAI 2026] TuckA: Hierarchical Compact Tensor Experts for Efficient Fine-Tuning
 
+[![arXiv](https://img.shields.io/badge/arXiv-2511.06859-b31b1b?style=flat&logo=arxiv)](http://arxiv.org/abs/2511.06859)
+
 </div>
 
 <div align="center">
