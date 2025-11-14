@@ -87,7 +87,7 @@ class TuckALayer(BaseTunerLayer):
         adapter_name: str,
         **kwargs,
     ) -> None:
-        """Internal function to create hra adapter
+        """Internal function to create tucka adapter
 
         Args:
             adapter_name (`str`): Name for the adapter to add.

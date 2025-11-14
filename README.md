@@ -11,7 +11,7 @@
 </div>
 
 ## Introduction
-This repository includes the official implementation of TuckA.
+This repository includes the official implementation of TuckA. We provide a brief walkthrough of the code [here](https://github.com/LQF39466/TuckA/blob/main/peft/tuners/TuckA/README.md).
 
 ## Quick Start
 
@@ -59,8 +59,29 @@ Replace `*` with the dataset you want to run.
 
 ### Mathematical Reasoning
 
-Set the hyperparameters in `math/scripts/run_*.sh`, then make sure your command line is in the `./math` directory and run:
+Set the hyperparameters in `math/scripts/run_*.sh`, then make sure you are under the `./math` directory and run:
 ```
 conda activate tucka-math
 bash scripts/run_*.sh
 ```
+
+### Acknowledgement
+
+Our implementation is based on the [Hugging Face PEFT](https://huggingface.co/docs/peft/index) library. The code for the mathematical reasoning task is built upon the [PiSSA](https://github.com/GraphPKU/PiSSA) repository. We thank the authors for making their code publicly available.
+
+### Citations
+
+If you find this work useful please consider citing our paper as:
+
+```
+@inproceedings{lei2026tucka,
+  title={TuckA: Hierarchical Compact Tensor Experts for Efficient Fine-Tuning},
+  author={Qifeng Lei and Zhiyong Yang and Qianqian Xu and Cong Hua and Qingming Huang},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  year={2026},
+}
+```
+
+### Contact
+
+If you encounter any problems using the code or reproducing our results, please open an issue in this repository. We will respond as soon as possible.
