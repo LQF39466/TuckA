@@ -48,12 +48,21 @@ def worker_process(device_idx, batch_list, args, output_file):
         batch_query, batch_answer, batch_task = batch
         with torch.no_grad():
             inputs = tokenizer(batch_query, return_tensors="pt", padding=True, truncation=True).to(f"cuda:{device_idx}")
+            
+            generation_kwargs = {
+                "max_new_tokens": args.max_tokens,
+                "pad_token_id": tokenizer.eos_token_id,
+            }
+            if args.temperature > 0:
+                generation_kwargs["temperature"] = args.temperature
+                generation_kwargs["top_p"] = args.top_p
+                generation_kwargs["do_sample"] = True
+            else:
+                generation_kwargs["do_sample"] = False
+
             outputs = model.generate(
                 **inputs,
-                max_new_tokens=args.max_tokens,
-                temperature=args.temperature,
-                top_p=args.top_p,
-                pad_token_id=tokenizer.eos_token_id
+                **generation_kwargs
             )
             decoded = tokenizer.batch_decode(outputs, skip_special_tokens=True)
             stripped = []
