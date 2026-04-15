@@ -289,6 +289,7 @@ class TuckALinear(nn.Module, TuckALayer):
 
         # Register as trainable
         self.tucka_ec[active_adapter].data.copy_(centroids)
+        self.ec_initialized = True
 
     def _calc_affinity_score(self, x: torch.Tensor, active_adapter) -> torch.Tensor:
         input = x.mean(dim=0).mean(dim=0, keepdim=True)  # 1, in_features
